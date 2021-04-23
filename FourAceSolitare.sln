@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourAceSolitare", "FourAceSolitare\FourAceSolitare.csproj", "{0A2E29DE-84D5-4A83-B0D4-441C7E7ED328}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A2E29DE-84D5-4A83-B0D4-441C7E7ED328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2E29DE-84D5-4A83-B0D4-441C7E7ED328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2E29DE-84D5-4A83-B0D4-441C7E7ED328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2E29DE-84D5-4A83-B0D4-441C7E7ED328}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8243005-9BD9-4C38-A0A9-0FB827C5AE25}
+	EndGlobalSection
+EndGlobal

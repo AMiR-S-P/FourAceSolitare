@@ -1,0 +1,113 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>FourAceSolitaire</RootNamespace>
+    <ApplicationIcon>fourace_128x128_HAG_icon.ico</ApplicationIcon>
+    <Version>2.7.0</Version>
+    <Authors>Amir Setvati Paydar</Authors>
+    <Company>Amir Setvati Paydar</Company>
+    <Product>AMiRSP</Product>
+    <Description>AmirSetvatiPaydar@gmail.com</Description>
+    <Copyright>Free</Copyright>
+    <PackageLicenseFile>FourAceSolitaireCR.txt</PackageLicenseFile>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageIcon>fourAce_128x128.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\CardBack.png" />
+    <None Remove="Resources\Cards\AceBlack.png" />
+    <None Remove="Resources\Cards\AceRed.png" />
+    <None Remove="Resources\Cards\Club.png" />
+    <None Remove="Resources\Cards\Diamond.png" />
+    <None Remove="Resources\Cards\EightBlack.png" />
+    <None Remove="Resources\Cards\EightRed.png" />
+    <None Remove="Resources\Cards\FiveBlack.png" />
+    <None Remove="Resources\Cards\FiveRed.png" />
+    <None Remove="Resources\Cards\FourBlack.png" />
+    <None Remove="Resources\Cards\FourRed.png" />
+    <None Remove="Resources\Cards\Heart.png" />
+    <None Remove="Resources\Cards\JackBlack.png" />
+    <None Remove="Resources\Cards\JackRed.png" />
+    <None Remove="Resources\Cards\KingBlack.png" />
+    <None Remove="Resources\Cards\KingRed.png" />
+    <None Remove="Resources\Cards\Nineblack.png" />
+    <None Remove="Resources\Cards\NineRed.png" />
+    <None Remove="Resources\Cards\OneBlack.png" />
+    <None Remove="Resources\Cards\OneRed.png" />
+    <None Remove="Resources\Cards\QueenBlack.png" />
+    <None Remove="Resources\Cards\QueenRed.png" />
+    <None Remove="Resources\Cards\SevenBlack.png" />
+    <None Remove="Resources\Cards\SevenRed.png" />
+    <None Remove="Resources\Cards\SixBlack.png" />
+    <None Remove="Resources\Cards\SixRed.png" />
+    <None Remove="Resources\Cards\Spade.png" />
+    <None Remove="Resources\Cards\TenBlack.png" />
+    <None Remove="Resources\Cards\TenRed.png" />
+    <None Remove="Resources\Cards\ThreeBlack.png" />
+    <None Remove="Resources\Cards\ThreeRed.png" />
+    <None Remove="Resources\Cards\TwoBlack.png" />
+    <None Remove="Resources\Cards\TwoRed.png" />
+    <None Remove="Resources\Cards\ZeroBlack.png" />
+    <None Remove="Resources\Cards\ZeroRed.png" />
+    <None Remove="Resources\RecycleBin.png" />
+    <None Include="..\..\Icons\FourAce\fourAce\fourAce_128x128.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="C:\Users\AMiRSP\Desktop\FourAceSolitaireCR.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\..\Assemblies\System.Windows.Interactivity.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\CardBack.png" />
+    <Resource Include="Resources\Cards\AceBlack.png" />
+    <Resource Include="Resources\Cards\AceRed.png" />
+    <Resource Include="Resources\Cards\Club.png" />
+    <Resource Include="Resources\Cards\Diamond.png" />
+    <Resource Include="Resources\Cards\EightBlack.png" />
+    <Resource Include="Resources\Cards\EightRed.png" />
+    <Resource Include="Resources\Cards\FiveBlack.png" />
+    <Resource Include="Resources\Cards\FiveRed.png" />
+    <Resource Include="Resources\Cards\FourBlack.png" />
+    <Resource Include="Resources\Cards\FourRed.png" />
+    <Resource Include="Resources\Cards\Heart.png" />
+    <Resource Include="Resources\Cards\JackBlack.png" />
+    <Resource Include="Resources\Cards\JackRed.png" />
+    <Resource Include="Resources\Cards\KingBlack.png" />
+    <Resource Include="Resources\Cards\KingRed.png" />
+    <Resource Include="Resources\Cards\Nineblack.png" />
+    <Resource Include="Resources\Cards\NineRed.png" />
+    <Resource Include="Resources\Cards\OneBlack.png" />
+    <Resource Include="Resources\Cards\OneRed.png" />
+    <Resource Include="Resources\Cards\QueenBlack.png" />
+    <Resource Include="Resources\Cards\QueenRed.png" />
+    <Resource Include="Resources\Cards\SevenBlack.png" />
+    <Resource Include="Resources\Cards\SevenRed.png" />
+    <Resource Include="Resources\Cards\SixBlack.png" />
+    <Resource Include="Resources\Cards\SixRed.png" />
+    <Resource Include="Resources\Cards\Spade.png" />
+    <Resource Include="Resources\Cards\TenBlack.png" />
+    <Resource Include="Resources\Cards\TenRed.png" />
+    <Resource Include="Resources\Cards\ThreeBlack.png" />
+    <Resource Include="Resources\Cards\ThreeRed.png" />
+    <Resource Include="Resources\Cards\TwoBlack.png" />
+    <Resource Include="Resources\Cards\TwoRed.png" />
+    <Resource Include="Resources\Cards\ZeroBlack.png" />
+    <Resource Include="Resources\Cards\ZeroRed.png" />
+    <Resource Include="Resources\RecycleBin.png" />
+  </ItemGroup>
+
+</Project>

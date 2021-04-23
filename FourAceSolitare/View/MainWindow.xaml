@@ -1,0 +1,65 @@
+﻿<Window x:Class="FourAceSolitare.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:FourAceSolitaire.ViewModel"
+        xmlns:custom="clr-namespace:FourAceSolitaire.CustomControls"
+        xmlns:model="clr-namespace:FourAceSolitaire.Model"
+        xmlns:local="clr-namespace:FourAceSolitare"
+        xmlns:helper="clr-namespace:FourAceSolitaire.Helper"
+        xmlns:interactivity="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behavior="clr-namespace:FourAceSolitaire.Behaviors"
+        mc:Ignorable="d" Background="#FF07fba1" Height="500" Width="1200"
+        WindowStartupLocation="CenterScreen" x:Name="mainWindow"
+        Title="Four Ace Solitaire" MinHeight="700" MinWidth="1200">
+    <Window.DataContext>
+        <vm:MainWindowVM/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type model:CardModel}">
+                <custom:CardThumb Column="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=ItemsControl}}"
+                              Template="{StaticResource cardThumbTemplate}"/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".25*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Panel.ZIndex="-99">
+            <Button Command="{Binding DrawCommand}" Style="{StaticResource cardsButton}" />
+
+            <TextBlock FontSize="40" 
+                       VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,270">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{}{0}:{1}:{2}">
+                        <Binding Path="ElapsedTime.Hours"/>
+                        <Binding Path="ElapsedTime.Minutes"/>
+                        <Binding Path="ElapsedTime.Seconds"/>
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+            <TextBlock Text="{Binding Message}"
+                       FontSize="20" 
+                       VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,150"/>
+            <TextBlock Text="{Binding DrawCount,StringFormat='Draw: {0}'}"
+                       FontSize="55" 
+                       VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,250,0,0"/>
+
+            <Button Command="{Binding NewGameCommand}" 
+                    Style="{StaticResource newGameButton}"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                    Margin="0,0,0,50"/>
+
+        </Grid>
+
+        <custom:Table Grid.Column="1"/>
+       
+    </Grid>
+</Window>
