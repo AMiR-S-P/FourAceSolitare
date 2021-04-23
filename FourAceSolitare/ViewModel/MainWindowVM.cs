@@ -1,5 +1,4 @@
 ﻿using FourAceSolitaire.Command;
-using FourAceSolitaire.Memento;
 using FourAceSolitaire.Model;
 using System;
 using System.Collections;
@@ -154,7 +153,7 @@ namespace FourAceSolitaire.ViewModel
 
 
 
-        public async Task Draw()
+        public  Task Draw()
         {
             if (Cards.Count > 3)
             {
@@ -164,6 +163,7 @@ namespace FourAceSolitaire.ViewModel
                 Column4.Add(Cards.Pop());
                 DrawCommand.OnCanExecuteChanged();
             }
+            return Task.CompletedTask;
         }
 
         public async Task<bool> SendToGarbage(ObservableCollection<CardModel> column)
