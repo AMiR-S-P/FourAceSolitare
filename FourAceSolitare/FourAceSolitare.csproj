@@ -18,6 +18,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Memento\**" />
+    <EmbeddedResource Remove="Memento\**" />
+    <None Remove="Memento\**" />
+    <Page Remove="Memento\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Resources\CardBack.png" />
     <None Remove="Resources\Cards\AceBlack.png" />
     <None Remove="Resources\Cards\AceRed.png" />
