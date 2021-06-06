@@ -17,6 +17,11 @@
     <PackageIcon>fourAce_128x128.png</PackageIcon>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="Memento\**" />
     <EmbeddedResource Remove="Memento\**" />
