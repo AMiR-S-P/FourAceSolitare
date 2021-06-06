@@ -60,6 +60,10 @@
     <None Remove="Resources\Cards\TwoRed.png" />
     <None Remove="Resources\Cards\ZeroBlack.png" />
     <None Remove="Resources\Cards\ZeroRed.png" />
+    <None Remove="Resources\fourAce_128x128.png" />
+    <None Remove="Resources\gitHub.png" />
+    <None Remove="Resources\google.png" />
+    <None Remove="Resources\linkedin.png" />
     <None Remove="Resources\RecycleBin.png" />
     <None Include="..\..\Icons\FourAce\fourAce\fourAce_128x128.png">
       <Pack>True</Pack>
@@ -114,6 +118,10 @@
     <Resource Include="Resources\Cards\TwoRed.png" />
     <Resource Include="Resources\Cards\ZeroBlack.png" />
     <Resource Include="Resources\Cards\ZeroRed.png" />
+    <Resource Include="Resources\fourAce_128x128.png" />
+    <Resource Include="Resources\gitHub.png" />
+    <Resource Include="Resources\google.png" />
+    <Resource Include="Resources\linkedin.png" />
     <Resource Include="Resources\RecycleBin.png" />
   </ItemGroup>
 

@@ -34,14 +34,14 @@
                 </Setter>
             </Style>
 
-            <Style TargetType="Button" x:Key="newGameButton">
+            <Style TargetType="Button" x:Key="buttonStyle">
                 <Setter Property="Height" Value="60" />
                 <Setter Property="FontSize" Value="30" />
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
-                            <Border x:Name="border" BorderThickness="2" Padding="5" CornerRadius="5" Background="#2F023321">
-                                <TextBlock x:Name="txtBlck" Text="New Game"  VerticalAlignment="Center" Foreground="#FF023321"/>
+                            <Border x:Name="border" BorderThickness="2" Padding="10" CornerRadius="5" Background="#2F023321" >
+                                <TextBlock x:Name="txtBlck" Text="{Binding Content,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Button}}"  VerticalAlignment="Center" Foreground="#FF023321"/>
                             </Border>
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">

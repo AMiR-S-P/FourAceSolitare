@@ -53,13 +53,17 @@
                        VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,250,0,0"/>
 
             <Button Command="{Binding NewGameCommand}" 
-                    Style="{StaticResource newGameButton}"
+                    Style="{StaticResource buttonStyle}" Content="New Game"
                     VerticalAlignment="Bottom" HorizontalAlignment="Center"
                     Margin="0,0,0,50"/>
 
         </Grid>
 
         <custom:Table Grid.Column="1"/>
-       
+
+        <Button Command="{Binding AboutCommand}" Grid.Column="1"
+                    Style="{StaticResource buttonStyle}" Content="About"
+                    VerticalAlignment="Bottom" HorizontalAlignment="Right"
+                    Margin="0,0,50,50"/>
     </Grid>
 </Window>

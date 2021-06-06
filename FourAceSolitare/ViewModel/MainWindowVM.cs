@@ -1,5 +1,7 @@
 ﻿using FourAceSolitaire.Command;
 using FourAceSolitaire.Model;
+using FourAceSolitaire.View;
+using FourAceSolitaire.ViewModels;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +14,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 
@@ -37,12 +40,13 @@ namespace FourAceSolitaire.ViewModel
         public string Message { get => message; set { message = value; OnPropertyChanged(); } }
         public AsyncRelayCommand<object> DrawCommand { get; set; }
         public AsyncRelayCommand<object> NewGameCommand { get; set; }
+        public AsyncRelayCommand<object> AboutCommand { get; set; }
 
         public MainWindowVM()
         {
             DrawCommand = new AsyncRelayCommand<object>(OnDraw, CanDraw);
             NewGameCommand = new AsyncRelayCommand<object>(OnNewGame);
-
+            AboutCommand = new AsyncRelayCommand<object>(OnAbout);
             Timer.Elapsed += Timer_Elapsed;
 
             ElapsedTime = Stopwatch.Elapsed;
@@ -53,7 +57,16 @@ namespace FourAceSolitaire.ViewModel
             });
         }
 
-        
+        private Task OnAbout(object arg)
+        {
+            //Not allowed in mvvm ;))
+            new AboutView()
+            {
+                DataContext = new AboutViewModel()
+            }.ShowDialog();
+            return Task.CompletedTask;
+        }
+
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             ElapsedTime = Stopwatch.Elapsed;
@@ -153,7 +166,7 @@ namespace FourAceSolitaire.ViewModel
 
 
 
-        public  Task Draw()
+        public Task Draw()
         {
             if (Cards.Count > 3)
             {
@@ -227,8 +240,8 @@ namespace FourAceSolitaire.ViewModel
             await Check();
             return true;
         }
-   
-    
+
+
 
     }
 }
